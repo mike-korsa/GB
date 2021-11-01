@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacts</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Главная</a>
+        <a href="contacts.html">Контакты</a>
+    </header>
+    <h1 class="header">Страница контактов</h1>
+    <h2 class="header__sub">Contact Us</h2>
+    <p>Text Text</p>
+    <img src="img/testimg.jpeg" alt="Picture" width="350px">
+    <h4 class="subhead__sub">Address</h4>
+    <p class="text">1234567</p>
+    <h4 class="subhead__sub">Phone</h4>
+    <ul>
+        <li><a href="tel:+79999999999">+7-999-999-999-9</a></li>
+        <li><a href="tel:+78888888888">+7-888-888-888-8</a></li>
+    </ul>
+    <h4 class="subhead__sub">Online service</h4>
+    <ul>
+        <li><a href="https://www.yandex.ru">Наш сайт</a></li>
+        <li><a href="mailto:mail@mail.ru">Наша почта</a></li>
+    </ul>
+    <h4 class="subhead__sub">Send us message</h4>
+    <form action="">
+        <label for="fullname">Full Name</label>
+        <input class="form__input" type="text" id="fullname" placeholder="Иванов Иван Иванович"><br>
+        <label for="email">Email</label>
+        <input class="form__input" type="email" id="email" placeholder="mail@mail.ru"><br>
+        <label for="message">Message</label><br>
+        <textarea class="form__input" id="message" cols="30" rows="10" placeholder="Текст сообщения"></textarea><br>
+        <input class="form__button" type="submit" value="submit">
+    </form>
+    <div id="map" style="width: 600px; height: 400px"></div>
+    <footer>
+        <h3 class="subhead">Снова заголовок h3</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis possimus</p>
+        <hr>
+        <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li><a href="tel:+79999999999">+79999999999 (Номер телефона)</a></li>
+            <li><a href="mailto:mail@mail.ru">Электронная почта (mail@mail.ru)</a></li>
+        </ul>
+        <p>Все права защищены</p>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c4f83f3a-8252-474b-a95f-0e5d8d1c47cd
+    &lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [38.975313, 45.035470],
+                zoom: 10
+            });
+        }
+    </script>
+</body>
+
+</html>
