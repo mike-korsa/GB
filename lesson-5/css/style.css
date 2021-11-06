@@ -12,15 +12,47 @@ body {
     margin: 0 auto;
     }
 
+.main-info-sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-info-sub-info {
+    width: 359px;
+}
+
+ul {display: flex;
+    justify-content:space-between;
+    list-style: none;
+    }
+.bottom-block-sub-info {
+    width: 495px;
+}
+
+.footer-head {
+    width: 340px;
+}
+
 .par {
     font-size: 16px;
     line-height: 26px;
     color: #1F3F68;
 }
 
+.par-centered {
+    text-align: center;
+}
+
+
 .h1 {
     font-size: 64px;
     color: #1F3F68;
+    width: 510px;
+
+}
+
+h1 ~ p {
+    width: 425px;
 }
 
 .h2 {
