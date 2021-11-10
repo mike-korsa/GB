@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    }
+.Menu{
+    border: 3px solid rgb(36, 206, 73);
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+    border: 3px solid rgb(135, 21, 192);
+    width: 600px;
+    height: 350px;
+    padding: 16px;
+    margin-bottom: 80px;
+}
+.introduction{
+    width: 510;
+}
+.quote{
+    width: 425px;
+    padding: 16px;
+    margin-bottom: 80px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+h3 {
+    border: 3px solid #000;
+    margin: 30px;
+}
+.secondheading{
+    border: 3px solid rgb(46, 22, 184);
+    margin-bottom: 80px;
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.content{
+    display: flex;
+    justify-content: space-between 
+}
+.thirdheading{
+    border: 3px solid rgb(201, 143, 36);
+    width: 359px;
+    height: 450px;
+    padding: 16px;
+    box-sizing: content-box;
+    margin-bottom: 80px;
+}
+.text{
+    border: 3px solid rgb(75, 113, 134);
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.block{
+    border: 3px solid rgb(201, 143, 36);
+    width: 1135px;
+    height: 550px;
+    margin-bottom: 20px;
+}
+.fourthheading{
+    width: 350px;
+    height: 350px;
+    border: 3px solid rgb(126, 21, 112);
+    padding: 16px;
+    box-sizing: border-box;
+    border-bottom-style: 150px;
+    margin: 95px 50px 40px 30px;
+}
+.line{
+    margin-bottom: 20px;
+}
+.inform{
+    display: flex;
+}
+.forcommunication{
+    border: 1px solid #000;
+    width: 550px;
+    text-align: center;
+    margin: 80px;
+    border: none;
+}
+.map{
+    border: 1px solid #000;
+    margin-top: 80px;
+    border-radius: 25px;
+}
+.contacts{
+    border: 3px solid rgb(67, 127, 155);
+    box-sizing: border-box;
+    padding: 16px;
+}
+.author{
+    border: 3px solid rgb(67, 127, 155);
+    box-sizing: border-box;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+.contactspage{
+    border: 3px solid rgb(175, 42, 142);
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.containerinfo{
+    display: flex;
+}
+.fsm{
+    border: 3px solid rgb(231, 236, 238);
+    border-radius: 20px;
+    width: 550px;
+    height: 650px;
+    margin-left: 260px;
+}
+.input{
+    border: 1px solid #356ead;
+    width: 550px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+.buton{
+    background: #5a98d0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 26px;
+    text-align: center;
+    color: #1f3f68;
+    text-transform: uppercase;
+}
