@@ -2,7 +2,8 @@ package com.company.lesson2;
 
 public class Lesson2 {
     public static void main(String[] args) {
-        printNumOfString("test", 5);
+        //printNumOfString("test", 5);
+        System.out.println(isYearLeap(2026));
     }
 
     public static boolean isSummBetween(int a, int b){
