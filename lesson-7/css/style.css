@@ -8,12 +8,12 @@ body {
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
     }
 
 .top {
-    height: 768px;
+    min-height: 768px;
     background: linear-gradient(0deg, 
     #EBF3FB 8.84%, rgba(152, 195,
      232, 0) 31.12%);
@@ -82,6 +82,7 @@ flex-grow: 1;
 background-image: url(../img/top_back.png);
 background-repeat: no-repeat;
 background-position: right center;
+background-size: 44%;
 }
 
 .top__button {
@@ -286,4 +287,156 @@ h1 ~ p {
     text-transform: uppercase;
 }
 
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .top__info {
+        background-position: right 280px;
+    }
+
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 32px;
+    }
+
+    .footer {
+        padding-top: 48px;
+        margin-bottom: 64px;
+        margin-top: 112px;
+    }
+
+    .footer__joinus_info {
+        padding-top: 0px;
+        padding-bottom: 96px;
+
+    }
+    .footer__link {
+        padding: 4px 31px;
+    }
+
+    .contacts_list {
+        flex-direction: column;
+    }
+    .contacts_list_item {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 667px) {
+    .header {
+        padding-top: 24px;
+    }
+
+    .top {
+        min-height: 376px;
+        padding-bottom: 41px;
+        box-sizing: border-box;
+    }
+
+    .top__info {
+        padding-top: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+
+    .top__heading {
+        width: 100%;
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    h1 ~ p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top__button {
+        font-size: 12px;
+        line-height: 26px;
+        padding: 0 8px;
+    }
+
+    .h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .what-we-do {
+        padding-top: 48px;
+    }
+
+    .card-box {
+        padding-top: 32px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .par_project {
+        width: 100%;
+    }
+
+    .project__text {
+        font-size: 16px;
+        line-height: 19px;
+        right: 16px;
+        top: 16px;
+        width: 100%;
+    }
+
+    .project__text_left {
+        left: 16px;
+    }
+    .project__parent {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .project__item_margin {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+.footer {
+    padding-top: 18px;
+    padding-bottom: 32px;
+}
+    .footer__joinus {
+        flex-direction: column;
+        padding-bottom: 41px;
+    }
+    .footer__joinus_info {
+        width: 100%;
+        padding: 0px;
+    }
+    .footer-head {
+        width: 75%;
+        margin: 0 auto 32px;
+        text-align: center;
+    }
+
+    .contacts {
+        padding-bottom: 0px;
+    }
+
+    .footer-par {
+
+        margin-bottom: 32px;
+    }
+
+    .contacts_list_item {
+        margin-bottom: 18px;
+    }
+}
 
