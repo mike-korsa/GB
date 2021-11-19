@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" href="styles/style_of_blocks.css">
+    <link rel="stylesheet" href="styles/style_for_id.css">
+    <link rel="stylesheet" href="styles/media_styles.css">
+    <title>ДЗ №7 - Контакты</title>
+</head>
+
+<body>
+
+    <div class="page_top contacts_top">
+        <div class="page_mainbody page_top-content-box">
+            <div class="page_menu">
+                <a href="index.html"><img src="images_lesson/Logo.svg" alt="Страница_Главная"></a>
+                <a href="contacts.html"><img src="images_lesson/Contacts.svg" alt="Страница_Контакты"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page_fullwidth_picture">
+        <div class="page_mainbody">
+            <h2 class="contacts_h2">БРАТ ИЛИ СЕСТРА!</h2>
+            <p class="contacts_p">Русская Пастафарианская Церковь Макаронного Пастриархата
+                (РПЦ&nbsp;МП) приветствует тебя.</p>
+            <p class="contacts_p">Раминь.</p>
+        </div>
+    </div>
+
+    <div class="page_content">
+        <div class="page_mainbody">
+
+            <div class="horizontal_grp_of_blocks">
+                <div class="single_block block_contacts">
+                    <img class="project_image image_contacts" src="contacts/fsm-spaghetti.gif" alt="ЛММ не прогрузился">
+                    <h4 class="header_small">Address</h4>
+                    <p class="common_p p_contacts_margin">г.Нижний Новгород, ул. Горького, д. 226 (цоколь)</p>
+                    <h4 class="header_small">Phone</h4>
+                    <p class="common_p">
+                    <ul class="ul_contacts">
+                        <li class="contacts_li" id="li_phone">
+                            <p class="common_p p_contacts_margin">+7(123)1234567 (Мегафон)</p>
+                        </li>
+                        <li class="contacts_li" id="li_phone">
+                            <p class="common_p p_contacts_margin">+7(321)7654321 (МТС)</p>
+                        </li>
+                    </ul>
+                    </p>
+                    <h4 class="header_small">Online service</h4>
+                    <ul class="ul_contacts">
+                        <li class="contacts_li" id="li_email"><a href="https://mail.ru" target="_blank"></a>
+                            <p class="common_p p_contacts_margin">info@rpcmp.ru</p>
+                        </li>
+                        <li class="contacts_li" id="li_web"><a href="https://www.rpcmp.ru/" target="_blank"
+                                style="text-decoration: none;">
+                                <p class="common_p p_contacts_margin">https://www.rpcmp.ru/</p>
+                            </a></li>
+                    </ul>
+
+                </div>
+                <div class="single_block block_contacts" style="box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);">
+                    <form action="#">
+                        <h1 class="header_thebigest contacts_h1">SEND US MESSAGE:</h1>
+
+                        <div class="common_in_txt"> Full Name <br></div><input type="text" placeholder="Иван Пупкинс"
+                            class="common_input-text"><br>
+                        <div class="common_in_txt">Email <br></div><input type="email" placeholder="mail@mail.ru"
+                            class="common_input-text"> <br>
+                        <div class="common_in_txt"> Message: <br></div>
+                        <textarea placeholder="Enter your message here..." class="common_textarea"></textarea>
+
+
+                        <button type="submit" class="button_send">Отправить</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="map" style="width: 100%;">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2b6efaf87e19f8faa1988ffe71eeed056184f2763aeae62241296ac16f2a883a&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="page_bottom">
+        <div class="page_mainbody">
+            <div class="upper_half">
+                <div class="horizontal_grp_of_blocks woEk">
+                    <div class="single_block bottom_infoblock">
+                        <h3 class="header_middle bottom_text_white" style="margin-bottom: 32px;">
+                            Intersted to woEk? </h3>
+                        <p class="common_p bottom_text_white text_justify">Lorem ipsum dolor, sit amet
+                            consectetur
+                            adipisicing elit. Aspernatur repellendus molestiae
+                            fugiat
+                            laboriosam quibusdam corporis neque ullam, consequuntur odit omnis, adipisci recusandae
+                            corrupti!
+                            Corrupti, laudantium.</p>
+                    </div>
+                    <!--<div class="single_block">-->
+                    <div class="vertical_center" id="lets_talk_button">
+                        <p class="common_p bottom_text_white vertical_center horizont_center">Lets' talk</p>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <hr id="fat_border">
+        <div class="page_mainbody">
+            <div class="bottom_half">
+                <ul class="ul_contact">
+                    <li class="li_contact">
+                        <div class="num">1.</div>
+                        <div class="contact">г.Нижний Новгород, ул.&nbsp;Горького, д.&nbsp;226</div>
+                    </li>
+                    <li class="li_contact">
+                        <div class="num">2. </div>
+                        <div class="contact">+7(123)1234567</div>
+                    </li>
+                    <li class="li_contact">
+                        <div class="num">3. </div>
+                        <div class="contact">contact_us_for_info@rpcmp.ru
+                    </li>
+
+                </ul>
+
+                <p class="common_p bottom_text_white"><b><i> 2021 © Все права защищены Летающим Макаронным
+                            Монстром.</i></b></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

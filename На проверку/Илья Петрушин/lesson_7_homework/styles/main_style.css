@@ -1,0 +1,496 @@
+/*общий для всего сайта*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_part {
+    flex-grow: 1;
+}
+
+/*
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}*/
+
+.page_top{ 
+   /* min-height: 650px;*/
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    padding-top: 42px;
+    padding-bottom: 94px;
+}
+
+.page_menu {
+        justify-content: space-between;
+        height: 48px;
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row;
+}
+
+.top_info{
+    padding-top: 115px;
+    flex-grow: 1;
+   
+    background-image: url(../images_lesson/top_background.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 45%;
+}
+
+.page_top-content-box{
+    display: flex; 
+    flex-direction: column;
+}
+
+.page_mainbody{
+  /*  margin-top: 10px;
+    margin-bottom: 10px;*/
+    margin-left: auto;
+    margin-right: auto;
+ 
+    max-width: 1024px;
+    padding-left: 114px;
+    padding-right: 114px;
+    display: flex;
+    flex-direction: column;
+}
+
+.what-we-do{
+    padding-top: 68px;
+}
+
+.page_bottom{
+    background-color: #316099;
+    min-height: 542px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper_half{
+    padding-top: 91px;
+    padding-bottom: 96px;
+  /*  height: 391px;*/
+}
+
+.bottom_infoblock{
+    width: 495px;
+    text-align: left;
+}
+
+.bottom_half{
+    padding: 64px 0;
+/* height: 266px; */
+}
+
+.horizontal_grp_of_blocks{
+    display: flex;
+ /*   vertical-align: middle;*/
+    flex-direction: row;
+    justify-content: space-between;
+  /*  align-items: center;*/
+    width: 100%;
+ 
+}
+
+.map{
+    margin-top: 96px;
+    margin-bottom: 112px;
+}
+
+
+/*общий стиль для класса параграфов*/
+p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+}
+
+.p_contacts_margin{
+    margin: 10px 0px 40px 0px;
+}
+
+/*общее центрирование для объектов*/
+.contacts_h2, 
+.header_big,
+.header_middle,
+.button_send {
+    text-align: center;
+}
+
+/*общий цвет для объектов*/
+.common_p, 
+.header_thebigest, 
+.header_middle,
+.header_small {
+    color: #1F3F68;
+}
+
+/*общий для класса заголовка h2*/
+.header_big {
+    font-size: 42px;
+    font-weight: 400;
+    color: darkolivegreen;
+}
+
+.text_middle{
+    width: 80%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #222222;
+    margin: 32px auto 64px;
+    opacity: 1;
+}
+
+/*общий стиль для класса заголовка h1 */
+.header_thebigest {
+    width: 510px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.contacts_h1{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 48px;
+}
+
+.page_top_button {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+
+    padding: 15px 50px;
+    text-decoration: none;
+
+    margin-top: 71px;
+    display: inline-block;
+}
+
+/*стиль для заголовка h2 для страницы Контакты*/
+.contacts_h2 {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 74px;
+     
+    text-align: center;
+    letter-spacing: 0.04em;
+    
+    color: #FFFFFF;
+}
+.contacts_p{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/*общий для класса заголовка h3*/ 
+.header_middle {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+/*общий для заголовков h4*/
+.header_small {
+    font-size: 20px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    margin-bottom: 14px;
+}
+
+#header_message{
+    width: 485px;
+}
+
+.card_link {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    text-decoration: none;
+}
+
+.single_joke {
+    width: 359px;
+    padding: 44px 32px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    margin: 32px;
+}
+
+.joke_img{
+    align-self: center;
+    margin-bottom: 51px;
+}
+
+.project_image{
+    border-radius: 10px;
+    width: 100%;
+    flex-grow: 1;
+} 
+
+.single_image {
+    position: relative;
+}
+
+.single_image__margin {
+    margin-right: 32px;
+}
+
+.project_image__text{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 46px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #411f1f;
+    text-shadow: 2px 2px 2px #EBF3FB;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 1;
+}
+
+.left_text{
+    text-align: left;
+    top: 20px;
+    left: 20px;
+}
+
+.grp_of_images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.single_block{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom_text_white{
+    color: #FFFFFF;
+}
+
+.text_justify {
+    text-align: justify; 
+}
+
+#fat_border{
+    opacity: 0.4;
+    border: 1px solid #FFFFFF;
+}
+
+
+#lets_talk_button{
+    background-color: #5A98D0;
+    display: flex;
+    align-items: center; 
+    text-align: center; 
+    vertical-align: middle; 
+    color: white; 
+    /*font-size: 25px;
+    height: 58px;*/
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 237px;
+    padding: 15px 80px;
+    opacity: 1;
+}
+
+.vertical_center{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.horizont_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ul_contact{
+    list-style-type: none;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 64px;
+}
+
+.li_contact{
+    width: 350px; 
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    /*text-align: right;*/
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.num{
+    margin-right: 19px;
+}
+
+.woEk{
+    flex-direction: row;
+    align-items: center;
+}
+
+.page_fullwidth_picture{
+    background-image: url(../contacts/Mask_Group.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0px;
+
+    background-size: cover;
+    background-clip: border-box;
+}
+
+.page_content {
+    padding-top: 47px;
+}
+
+.block_contacts{
+    max-width: 50%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+
+    border-radius: 10px;
+    padding: 56px 56px 0px 56px;
+}
+
+.image_contacts{
+    padding-bottom: 56px;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacts_top{
+    padding-bottom: 42px;
+}
+
+/*для полей ввода и ввода текста*/
+.common_input-text {
+    opacity: 0.2;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 72px;
+    width: 100%;
+    padding: 21px 42px;
+    
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.common_textarea {
+    font-size: 20px;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+    width: 100%;
+    height: 144px;
+    padding-top: 21px;
+    padding-left: 36px;
+}
+
+
+
+.common_in_txt {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em; 
+    color: #1F3F68; 
+    opacity: 0.8;
+    padding-bottom: 8px;
+}
+
+/*для кнопки отправки сообщения*/
+.button_send {
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16,12,177,0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    height: 72px;
+    width: 100%;
+
+    margin-top: 72px;
+    margin-bottom: 56px;
+}
+
+.contacts_li{
+    list-style: none;
+    padding-left: 44px; /* Смещаем текст вправо */ 
+    margin-bottom: 16px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    font-weight: 300;
+}
+
+#li_phone{
+    background: url(../contacts/phone_icon.svg) no-repeat 0 4px; /* Параметры фона */
+}
+
+#li_email{
+    background: url(../contacts/mail_icon.svg) no-repeat 0 4px; /* Параметры фона */
+}
+#li_web{
+    background: url(../contacts/web_icon.svg) no-repeat 0 4px; /* Параметры фона */
+}
+
+.ul_contacts{
+    padding-top: 10px;
+    margin-bottom: 24px;
+}
+

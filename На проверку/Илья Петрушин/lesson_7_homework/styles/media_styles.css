@@ -1,0 +1,277 @@
+@media (max-width: 1024px) {
+    .page_mainbody{
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .top_info{
+        background-position: right bottom ;
+    }
+
+    #jokes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single_joke{
+        margin-bottom: 32px;
+    }
+
+    .upper_half{
+        padding: 47px 90px 64px 90px;
+    }
+
+    .bottom_half{
+        padding: 64px 90px;
+    }
+
+    .bottom_infoblock{
+        width: 343px;
+        margin-right: 51px;
+    }
+
+    #lets_talk_button{
+    /*    height: 32px;*/
+        min-width: 133px;
+        padding: 5px 40px 10px 40px;
+    }
+
+    .ul_contact {
+        flex-direction: column;
+        
+        width: 100%;
+    }
+
+    .li_contact{
+        text-align: left;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .image_contacts{
+        padding-bottom: 64px;
+    }
+
+    .page_content {
+        padding-top: 32px;
+    }
+
+    .contacts_h2{
+        font-size: 34px;
+        line-height: 48px;
+    }
+
+    .contacts_p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .horizontal_grp_of_blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block_contacts{
+        padding: 54px 54px 0px 54px;
+        max-width: 75%;
+    }
+
+    .map{
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .contacts_top{
+        padding-bottom: 30px;
+    }
+
+    .common_textarea{
+        padding-top: 20px;
+        padding-left: 34px;
+    }
+
+    .button_send {
+        margin-top: 70px;
+        margin-bottom: 54px;
+    }
+
+    .woEk{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 667px){
+
+    .woEk{
+        flex-direction: column;
+    }
+
+    .top_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+        padding-top: 36px;
+    }
+
+    #top{
+        width: 100%;
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    #header_message{
+        width: 100%;
+    }
+
+    .page_top{
+        padding-top: 24px;
+        padding-bottom: 41px;
+        min-height: 376px;
+        box-sizing: border-box;
+    }
+
+    .page_top_button{
+        font-size: 12px;
+        line-height: 26px;
+        padding: 0 8px;
+        margin-top: 32px;
+    }
+
+    .header_middle{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    #jokes{
+        padding-top: 32px;
+    }
+
+    .what-we-do{
+        padding-top: 48px;
+    }
+
+    .single_joke{
+        width: 100%;
+    }
+
+    .text_middle{
+        width: 100%;
+    }
+
+    .project_image__text{
+        font-size: 16px;
+        line-height: 19px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .left_text{
+        left: 10px;
+    }
+
+    .grp_of_images{
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .single_image__margin{
+        margin-right: 0%;
+        margin-bottom: 16px;
+    }
+
+    .upper_half{
+        padding: 18px 16px 40px 16px;
+    }
+
+    .bottom_half{
+        padding: 32px 16px;
+        align-items: center;
+    }
+
+    .horizontal_grp_of_blocks {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .ul_contact {
+         margin-bottom: 32px;
+    }
+
+    .li_contact{
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 17px;
+    }
+
+    .bottom_infoblock{
+        width: 343px;
+        margin-right: 0px;
+        margin-bottom: 42px;
+    }
+    .page_content {
+        padding-top: 16px;
+    }
+
+    #lets_talk_button{
+        padding: 0px;
+        min-width: 108px;
+    }
+
+    .bottom_text_white{
+        width: 100%;
+    }
+
+    .contacts_h1{
+        margin-bottom: 31px;
+    }
+    .contacts_h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .contacts_p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .page_content .page_mainbody{
+        padding: 0% 12px;
+    }
+
+    .block_contacts{
+        max-width: 100%;
+        padding: 32px 32px 0px 32px;
+    }
+
+    .map{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .common_input-text{
+        padding: 13px 54px 13px 26px;
+    }
+    
+    .contacts_top{
+        padding-bottom: 15px;
+        min-height: 15px;
+    }
+
+    .common_textarea{
+        padding-top: 13px;
+        padding-left: 22px;
+    }
+
+    .button_send {
+        margin-top: 46px;
+        margin-bottom: 36px;
+    }
+}
+
