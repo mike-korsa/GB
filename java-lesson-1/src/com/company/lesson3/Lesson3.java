@@ -97,7 +97,9 @@ public class Lesson3 {
      * 7-е задание
      * @param arr
      * @return
-     */
+     * тут еще ожно отрефакторить - вычислять сумму справа и слева только на первой итерации.
+     * на последующих только прибавлять к леввой сумме значение следующего элемента, а соответстсвенно
+     * правую уменьшать на это же значение/
     public static boolean checkBalance(int[] arr) {
         for (int i = 1 ; i < arr.length; i++){
             int summLeft = getArrRangeSumm(arr, 0, i - 1);
