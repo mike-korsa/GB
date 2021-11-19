@@ -12,7 +12,6 @@ public class Employee {
         return age;
     }
 
-
     public Employee(String fio, String post, String email, String phone, int salary, int age) {
         this.fio = fio;
         this.post = post;
