@@ -1,4 +1,4 @@
-package com.company.lesson6;
+package com.company.lesson6.animals;
 
 public class Animal {
     private String name;
@@ -16,11 +16,11 @@ public class Animal {
         return countOfObjects;
     }
 
-    protected void run(int barrierLength) {
+    public void run(int barrierLength) {
         System.out.println(String.format("%s пробежал %d метров.", this.name , barrierLength ));
     }
 
-    void sweem(int barrierLength) {
+    public void sweem(int barrierLength) {
         System.out.println(String.format("%s проплыл %d метров.", this.name , barrierLength ));
     }
 

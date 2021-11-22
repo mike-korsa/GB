@@ -1,4 +1,4 @@
-package com.company.lesson6;
+package com.company.lesson6.animals;
 
 public class Dog extends Animal{
     private final int MAXRUNLENGTH = 500;
@@ -9,7 +9,7 @@ public class Dog extends Animal{
     }
 
     @Override
-    void run(int barrierLength) {
+    public void run(int barrierLength) {
         if (barrierLength > MAXRUNLENGTH) {
             System.out.println(String.format("Собака не может бегать больче чем %s метров.", MAXRUNLENGTH));
         }
@@ -19,7 +19,7 @@ public class Dog extends Animal{
     }
 
     @Override
-    void sweem(int barrierLength) {
+    public void sweem(int barrierLength) {
         if (barrierLength > MAXSWEEMLENGTH) {
             System.out.println(String.format("Собака не может плавать больче чем %s метров.", MAXSWEEMLENGTH));
         }
