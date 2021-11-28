@@ -7,14 +7,6 @@ public class Plate {
         this.food = food;
     }
 
-    public void info() {
-        System.out.println("plate: " + food);
-    }
-
-    public void decreaseFood(int n) {
-        food -= n;
-    }
-
     public int getFood() {
         return food;
     }
@@ -22,4 +14,23 @@ public class Plate {
     public void setFood(int food) {
         this.food = food;
     }
+
+    public void info() {
+        System.out.println("plate: " + food);
+    }
+
+    public void decreaseFood(int n) {
+        if (n <= this.food) {
+            this.food -= n;
+        }
+        else {
+            System.out.println("В тарелке недостаточно еды.");
+        }
+    }
+
+    public void increaseFood(int n) {
+        this.food += n;
+    }
+
+
 }

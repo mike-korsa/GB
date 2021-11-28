@@ -6,11 +6,26 @@ import com.company.lesson7.animals.Dog;
 
 public class Lesson7 {
     public static void main(String[] args) {
-        Cat cat = new Cat("Barsik", 5);
-        Plate plate = new Plate(100);
+        Cat catBarsik = new Cat("Барсик", 5);
+        Plate plate = new Plate(20);
         plate.info();
-        cat.eat();
-        plate.setFood(plate.getFood() - cat.getAppetite());
+        //catBarsik.eat();
+        //plate.setFood(plate.getFood() - catBarsik.getAppetite());
+        Cat catVasya = new Cat("Вася", 7);
+        Cat catMurzik = new Cat("Мурзик", 3);
+        Cat catMarkiz = new Cat("Маркиз", 9);
+        Cat[] cats = new Cat[]{catBarsik, catVasya , catMurzik, catMarkiz, };
+        feedCats(cats, plate);
+        plate.increaseFood(30);
+        plate.info();
+        feedCats(cats, plate);
+    }
+
+    public static void feedCats(Cat[] cats, Plate plate ) {
+        for (Cat cat : cats) {
+            cat.eat(plate);
+            System.out.println("Кот " + cat.getName() + (cat.isFellFed() ? " сыт." : " не сыт."));
+        }
     }
 }
 

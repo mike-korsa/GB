@@ -1,9 +1,13 @@
 package com.company.lesson7.animals;
 
+import com.company.lesson7.Plate;
+
 public class Animal {
     private String name;
     private static int countOfObjects;
     private int appetite;
+    private boolean fellFed = false;
+
     public Animal() {
     }
 
@@ -22,13 +26,9 @@ public class Animal {
         return countOfObjects;
     }
 
-    public void run(int barrierLength) {
-        System.out.println(String.format("%s пробежал %d метров.", this.name , barrierLength ));
-    }
+    public int getAppetite() { return appetite; }
 
-    public void sweem(int barrierLength) {
-        System.out.println(String.format("%s проплыл %d метров.", this.name , barrierLength ));
-    }
+    public boolean isFellFed() { return fellFed; }
 
     public String getName() {
         return name;
@@ -37,4 +37,23 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void run(int barrierLength) {
+        System.out.println(String.format("%s пробежал %d метров.", this.name , barrierLength ));
+    }
+
+    public void sweem(int barrierLength) {
+        System.out.println(String.format("%s проплыл %d метров.", this.name , barrierLength ));
+    }
+
+    public void eat(Plate p) {
+        if (appetite <= p.getFood()) {
+            p.decreaseFood(appetite);
+            this.fellFed = true;
+        }
+        else  {
+            this.fellFed = false;
+        }
+    }
+
 }
