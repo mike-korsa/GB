@@ -1,57 +1,25 @@
 package com.company.lesson8;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.List;
 
 import static com.company.lesson8.Actions.*;
 
-class bProps {
-    int x;
-    int y;
-    String caption;
-    String action;
-    boolean isNumericButton;
-
-    public boolean isNumericButton() {
-        return isNumericButton;
-    }
-    public String getCaption() { return caption; }
-
-    public String getAction() { return action; }
-
-    public bProps( String action, String caption, boolean isNumericButton) {
-        this.action = action;
-        this.caption = caption;
-        this.isNumericButton=isNumericButton;
-    }
-}
-
 public class Window extends JFrame {
+    Double var1;
+    Double var2;
+    boolean isActionChoosen = false;
+    String choosenActionType;
 
     public static void main(String[] args) {
-
         new Window();
     }
 
-    bProps[][] initbPropsArr (){
-        bProps[][] bPropsArr = new bProps[4][5];
-        bPropsArr[0][0] = new bProps(RESETALL,"C",false );
-        bPropsArr[1][0] = new bProps(BACKSPACE,"<" ,false );
-        bPropsArr[3][0] = new bProps(DIVISION,"/" ,false );
-        bPropsArr[3][1] = new bProps(MULTIPLICATION,"x",false  );
-        bPropsArr[3][2] = new bProps(DEDUCTION,"-" ,false );
-        bPropsArr[3][3] = new bProps(PLUS,"+",false  );
-        bPropsArr[3][4] = new bProps(CALC,"=",false  );
-        bPropsArr[0][4] = new bProps(NEGATIVE,"+/-",false  );
-        bPropsArr[1][4] = new bProps("","0" ,true);
-        bPropsArr[2][4] = new bProps("","," ,true);
-        return bPropsArr;
-    }
-
     public Window() {
-        bProps[][] bPropsArr = initbPropsArr();
+        BProps[][] bPropsArr = initbPropsArr();
         setTitle("Test Window");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,20 +30,21 @@ public class Window extends JFrame {
         field.setHorizontalAlignment(4);
         add(field);
         int buttonSize = 68;
-        for (int i=0;i<4;i++) {
-            for (int j=0;j<5;j++) {
-                if (i>=0 && i<3 && j>0 && j<4) {
-                    String butttonText = Integer.toString( 10 - 3 + i - (j - 1) * 3);
-                    JButton button = createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
-                            butttonText, true);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i >= 0 && i < 3 && j > 0 && j < 4) {
+                    String butttonText = Integer.toString(10 - 3 + i - (j - 1) * 3);
+                    ActionButton button = createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
+                            butttonText, true, null, false);
                     button.addActionListener(createAction(field, true, button));
                     add(button);
-                }
-                else {
-                    bProps bp = bPropsArr[i][j];
+                } else {
+                    BProps bp = bPropsArr[i][j];
                     if (bp != null) {
-                        add(createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
-                                bp.getCaption(), bp.isNumericButton));
+                        ActionButton button = createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
+                                bp.getCaption(), bp.isNumeric, bp.getActionType(), bp.isMathOperator);
+                        button.addActionListener(createAction(field, bp.isNumeric, button));
+                        add(button);
                     }
                 }
 
@@ -84,37 +53,77 @@ public class Window extends JFrame {
         setVisible(true);
     }
 
-    JButton createButton(int x, int y, int witdh , int heigth, String caption, boolean isNumeric) {
-        JButton button = new JButton(caption);
+    ActionButton createButton(int x, int y, int witdh, int heigth, String caption, boolean isNumeric, String actionType, boolean isMathOperator) {
+        ActionButton button = new ActionButton();
+        button.setText(caption);
         button.setBounds(x, y, witdh, heigth);
-        /*button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                if (isNumeric) {
-                    //field
-                }
-                //button.setText("Нажал!");
-            }
-        });*/
-
+        button.setActionType(actionType);
+        button.setMathOperator(isMathOperator);
         return button;
     }
 
-    ActionListener createAction(JTextField field, boolean isNumeric, JButton button ) {
+    ActionListener createAction(JTextField field, boolean isNumeric, ActionButton button) {
         return (new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                String actionType = button.getActionType();
                 if (isNumeric) {
+                    if (isActionChoosen) {
+                        field.setText("");
+                        isActionChoosen = false;
+                    }
                     field.setText(field.getText() + button.getText());
+                    field.setText(field.getText().replace(",", "."));
+                } else {
+                    List<String> actions = Arrays.asList(PLUS, DEDUCTION);
+                    if (actionType.equals(BACKSPACE)) {
+                        field.setText(field.getText().substring(0, field.getText().length() - 1));
+                    }
+                    if (actionType.equals(RESETALL)) {
+                        var1 = null;
+                        var2 = null;
+                        choosenActionType = null;
+                        isActionChoosen = false;
+                        field.setText("");
+                    }
+                    if (button.isMathOperator()) {
+                        var1 = Double.parseDouble(field.getText());
+                        isActionChoosen = true;
+                        choosenActionType = actionType;
+                    }
+                    if (actionType.equals(CALC)) {
+                        var2 = Double.parseDouble(field.getText());
+                        Double result = null;
+                        if (choosenActionType.equals(PLUS))
+                            result = var1 + var2;
+                        if (choosenActionType.equals(DEDUCTION))
+                            result = var1 - var2;
+                        if (choosenActionType.equals(DIVISION))
+                            result = var1 / var2;
+                        if (choosenActionType.equals(MULTIPLICATION))
+                            result = var1 * var2;
+                        field.setText(Double.toString(result));
+                    }
+
                 }
-                //button.setText("Нажал!");
             }
         });
-
     }
 
-
-
+    BProps[][] initbPropsArr() {
+        BProps[][] bPropsArr = new BProps[4][5];
+        bPropsArr[0][0] = new BProps(RESETALL, "C", false, false);
+        bPropsArr[1][0] = new BProps(BACKSPACE, "<", false, false);
+        bPropsArr[3][0] = new BProps(DIVISION, "/", false, true);
+        bPropsArr[3][1] = new BProps(MULTIPLICATION, "x", false, true);
+        bPropsArr[3][2] = new BProps(DEDUCTION, "-", false, true);
+        bPropsArr[3][3] = new BProps(PLUS, "+", false, true);
+        bPropsArr[3][4] = new BProps(CALC, "=", false, false);
+        bPropsArr[0][4] = new BProps(NEGATIVE, "+/-", false, false);
+        bPropsArr[1][4] = new BProps("", "0", true, false);
+        bPropsArr[2][4] = new BProps("", ",", true, false);
+        return bPropsArr;
+    }
 }
 
 
