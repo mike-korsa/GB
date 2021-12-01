@@ -21,7 +21,6 @@ public class Window extends JFrame {
         BProps[][] bPropsArr = initbPropsArr();
         setTitle("Test Window");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         setBounds(300, 300, 400, 460);
         setLayout(null);
         JTextField field = new JTextField();
@@ -41,8 +40,8 @@ public class Window extends JFrame {
                     BProps bp = bPropsArr[i][j];
                     if (bp != null) {
                         ActionButton button = createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
-                                bp.getCaption(), bp.isNumeric, bp.getActionType(), bp.isMathOperator);
-                        button.addActionListener(createAction(field, bp.isNumeric, button));
+                                bp.getCaption(), bp.isNumeric(), bp.getActionType(), bp.isMathOperator());
+                        button.addActionListener(createAction(field, bp.isNumeric(), button));
                         add(button);
                     }
                 }
