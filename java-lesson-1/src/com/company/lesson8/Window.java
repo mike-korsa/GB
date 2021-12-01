@@ -61,19 +61,20 @@ public class Window extends JFrame {
         field.setBounds(20, 20, 340, 32);
         field.setHorizontalAlignment(4);
         add(field);
+        int buttonSize = 68;
         for (int i=0;i<4;i++) {
             for (int j=0;j<5;j++) {
                 if (i>=0 && i<3 && j>0 && j<4) {
-                    int cap = 10 - 3 + i - (j - 1) * 3;
-                    JButton button = createButton(20 + i * 68, 60 + j * 68, 68, 68,
-                            Integer.toString(cap), true);
-                    button.addActionListener(action(field, true));
+                    String butttonText = Integer.toString( 10 - 3 + i - (j - 1) * 3);
+                    JButton button = createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
+                            butttonText, true);
+                    button.addActionListener(createAction(field, true, button));
                     add(button);
                 }
                 else {
                     bProps bp = bPropsArr[i][j];
                     if (bp != null) {
-                        add(createButton(20 + i * 68, 60 + j * 68, 68, 68,
+                        add(createButton(20 + i * buttonSize, 60 + j * buttonSize, buttonSize, buttonSize,
                                 bp.getCaption(), bp.isNumericButton));
                     }
                 }
@@ -99,12 +100,12 @@ public class Window extends JFrame {
         return button;
     }
 
-    ActionListener action(JTextField field, boolean isNumeric ) {
+    ActionListener createAction(JTextField field, boolean isNumeric, JButton button ) {
         return (new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 if (isNumeric) {
-                    field.setText(field.getText() + "dd");
+                    field.setText(field.getText() + button.getText());
                 }
                 //button.setText("Нажал!");
             }
