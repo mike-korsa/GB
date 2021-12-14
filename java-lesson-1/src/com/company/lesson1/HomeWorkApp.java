@@ -3,10 +3,14 @@ package com.company.lesson1;
 public class HomeWorkApp {
     public static void main(String[] args) {
         // write your code here
-        printThreeWords();
+        /*printThreeWords();
         checkSumSign();
         printColor();
-        compareNumbers();
+        compareNumbers();*/
+        //System.out.println(  2 + 2 + "sdfsd" );
+        System.out.println(new int[][] { { 1, 2, 7 }, { 3, 4, 5 } }[1][2]);
+        String s = "sss";
+        System.out.println(s.charAt() [1]);
     }
 
     public static void printThreeWords() {
