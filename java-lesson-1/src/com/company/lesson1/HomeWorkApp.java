@@ -10,7 +10,7 @@ public class HomeWorkApp {
         //System.out.println(  2 + 2 + "sdfsd" );
         System.out.println(new int[][] { { 1, 2, 7 }, { 3, 4, 5 } }[1][2]);
         String s = "sss";
-        System.out.println(s.charAt() [1]);
+        System.out.println(s.charAt(1));
     }
 
     public static void printThreeWords() {
