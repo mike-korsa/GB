@@ -26,12 +26,16 @@ public class Customer extends Person {
         purchaseList.add(product);
     }
 
-    public void findProductOnMarket(Market market) {
-        for (Product product : getExpectedPurchaseList()) {
+    public void findProductOnMarket(Market market, String name, String lastName) {
+        List<Product> li = new ArrayList<>(getExpectedPurchaseList());
+        for (Product product : li) {
             for (Seller seller : market.getSellers()) {
-                boolean isBought = seller.sellProducts(this, product);
-                if (isBought) {
-                    break;
+                if (seller.getName().equals(name) && seller.getLastName().equals(lastName)) {
+                    boolean isBought = seller.sellProducts(this, product);
+                    if (isBought) {
+                        expectedPurchaseList.remove(product);
+                        break;
+                    }
                 }
             }
         }
@@ -46,7 +50,7 @@ public class Customer extends Person {
                 result.append(product.getName());
                 result.append(" в количестве ");
                 result.append(product.getQuantity());
-                result.append(" ");
+                result.append(", ");
             }
         }
 
