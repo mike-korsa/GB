@@ -26,7 +26,7 @@ public class Main {
 
         Customer customer = createFirstCustomer();
         customer.findProductOnMarket(market, firstSeller.getName(), firstSeller.getLastName());
-        customer.findProductOnMarket(market, null, null);
+        //customer.findProductOnMarket(market, null, null);
         customer.info();
     }
 

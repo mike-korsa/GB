@@ -27,18 +27,34 @@ public class Customer extends Person {
     }
 
     public void findProductOnMarket(Market market, String name, String lastName) {
-        List<Product> li = new ArrayList<>(getExpectedPurchaseList());
-        for (Product product : li) {
-            for (Seller seller : market.getSellers()) {
+        List<Seller> sellers = market.getSellers();
+        for (Product product : getExpectedPurchaseList()) {
+            //если продавец по имени, не вернул товар - ищем без имени
+            if (!findProductOnSeller(sellers, product, name, lastName )) {
+                findProductOnSeller(sellers, product, null, null );
+            }
+        }
+    }
+
+    public boolean findProductOnSeller(List<Seller> sellers, Product product, String name, String lastName ) {
+        for (Seller seller : sellers) {
+            if (name != null && lastName != null) {
                 if (seller.getName().equals(name) && seller.getLastName().equals(lastName)) {
                     boolean isBought = seller.sellProducts(this, product);
                     if (isBought) {
-                        expectedPurchaseList.remove(product);
-                        break;
+                        return true;
                     }
                 }
             }
+            else {
+                boolean isBought = seller.sellProducts(this, product);
+                if (isBought) {
+                    return true;
+                }
+            }
+
         }
+        return false;
     }
 
     public void info() {
