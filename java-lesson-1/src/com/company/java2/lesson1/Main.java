@@ -38,8 +38,10 @@ public class Main {
         Product secondProduct = new Product();
         secondProduct.setName(MarketConstants.CUCUMBER_PRODUCT_NAME);
         secondProduct.setQuantity(2);
-
-        return new Customer(List.of(firstProduct, secondProduct), 50);
+        List<Product> p = new ArrayList<>();
+        p.add(firstProduct);
+        p.add(secondProduct);
+        return new Customer(p, 50);
     }
 
     private static Seller createFirstSeller() {

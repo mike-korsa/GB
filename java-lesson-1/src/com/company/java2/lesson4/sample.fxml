@@ -1,0 +1,45 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox fx:controller="com.company.java2.lesson4.Controller" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+    <Label fx:id="mainTextArea" VBox.vgrow="ALWAYS" alignment="TOP_CENTER"/>
+    <HBox alignment="CENTER">
+        <Button text="Загрузить список животных" onAction="#loadAnimals"/>
+    </HBox>
+    <VBox alignment="TOP_CENTER">
+        <TextField fx:id="nameTextField" promptText="Кличка животного">
+            <VBox.margin>
+                <Insets top="10" bottom="10"/>
+            </VBox.margin>
+        </TextField>
+
+        <TextField fx:id="colorTextField" promptText="Цвет животного">
+            <VBox.margin>
+                <Insets bottom="10"/>
+            </VBox.margin>
+        </TextField>
+
+        <TextField fx:id="ageTextField" promptText="Возраст животного">
+            <VBox.margin>
+                <Insets bottom="10"/>
+            </VBox.margin>
+        </TextField>
+
+        <TextField fx:id="jumpHeightTextField" promptText="Высота прыжка">
+            <VBox.margin>
+                <Insets bottom="10"/>
+            </VBox.margin>
+        </TextField>
+
+        <Button text="Добавить животное" onAction="#saveAnimal">
+            <VBox.margin>
+                <Insets bottom="10"/>
+            </VBox.margin>
+        </Button>
+    </VBox>
+</VBox>
