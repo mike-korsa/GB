@@ -1,4 +1,4 @@
-package com.company.java2.lesson4.animals;
+package com.company.java2.lesson4_2.animals;
 
 public class Dog extends Animal implements Jumpable {
     public Dog() {

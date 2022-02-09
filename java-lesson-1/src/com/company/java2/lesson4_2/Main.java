@@ -1,4 +1,4 @@
-package com.company.java2.lesson4;
+package com.company.java2.lesson4_2;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

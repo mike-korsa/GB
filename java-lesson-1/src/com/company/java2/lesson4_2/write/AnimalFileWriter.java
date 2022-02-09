@@ -1,7 +1,7 @@
-package com.company.java2.lesson4.write;
+package com.company.java2.lesson4_2.write;
 
-import com.company.java2.lesson4.animals.Animal;
-import com.company.java2.lesson4.constants.Constants;
+import com.company.java2.lesson4_2.animals.Animal;
+import com.company.java2.lesson4_2.constants.Constants;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

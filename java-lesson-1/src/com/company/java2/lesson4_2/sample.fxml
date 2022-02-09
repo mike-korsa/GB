@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
-<VBox fx:controller="com.company.java2.lesson4.Controller" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+<VBox fx:controller="com.company.java2.lesson4_2.Controller" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
     <Label fx:id="mainTextArea" VBox.vgrow="ALWAYS" alignment="TOP_CENTER"/>
     <HBox alignment="CENTER">
         <Button text="Загрузить список животных" onAction="#loadAnimals"/>

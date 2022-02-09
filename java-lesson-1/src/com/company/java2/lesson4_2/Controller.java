@@ -1,12 +1,12 @@
-package com.company.java2.lesson4;
+package com.company.java2.lesson4_2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import com.company.java2.lesson4.animals.Cat;
-import com.company.java2.lesson4.read.AnimalFileReader;
-import com.company.java2.lesson4.write.AnimalFileWriter;
+import com.company.java2.lesson4_2.animals.Cat;
+import com.company.java2.lesson4_2.read.AnimalFileReader;
+import com.company.java2.lesson4_2.write.AnimalFileWriter;
 
 public class Controller {
     @FXML

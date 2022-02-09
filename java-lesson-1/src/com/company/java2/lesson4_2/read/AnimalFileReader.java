@@ -1,8 +1,8 @@
-package com.company.java2.lesson4.read;
+package com.company.java2.lesson4_2.read;
 
-import com.company.java2.lesson4.animals.Animal;
-import com.company.java2.lesson4.animals.AnimalFactory;
-import com.company.java2.lesson4.constants.Constants;
+import com.company.java2.lesson4_2.animals.Animal;
+import com.company.java2.lesson4_2.animals.AnimalFactory;
+import com.company.java2.lesson4_2.constants.Constants;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

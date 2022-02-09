@@ -1,4 +1,4 @@
-package com.company.java2.lesson4.animals;
+package com.company.java2.lesson4_2.animals;
 
 public interface Jumpable {
     default void jump() {

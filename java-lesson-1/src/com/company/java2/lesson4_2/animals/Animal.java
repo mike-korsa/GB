@@ -1,4 +1,4 @@
-package com.company.java2.lesson4.animals;
+package com.company.java2.lesson4_2.animals;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
