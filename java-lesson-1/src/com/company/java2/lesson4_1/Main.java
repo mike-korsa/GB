@@ -11,9 +11,13 @@ public class Main {
         integerOwnLinkedList.addNode(345);
 
         integerOwnLinkedList.display();
-        integerOwnLinkedList.display(0);
+        integerOwnLinkedList.addNode(555, 3);
+        integerOwnLinkedList.display();
+        integerOwnLinkedList.removeNode( 3);
+        integerOwnLinkedList.display();
+        //integerOwnLinkedList.display(0);
 
-        Integer[] arr = {150, 347, 111};
-        System.out.println(arr[1]);
+        /*Integer[] arr = {150, 347, 111};
+        System.out.println(arr[1]);*/
     }
 }

@@ -11,18 +11,44 @@ public class OwnLinkedList<T> {
         this.tail = null;
     }
 
+    public void addNode(T data, int index) {
+        Node newNode = new Node(data);
+        //если ставим в начало
+        if (index == 0) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node curNode = head;
+            for (int i = 0; i < index - 1; i++) {
+                curNode = curNode.next;
+            }
+            newNode.next = curNode.next;
+            curNode.next = newNode;
+        }
+    }
+
     public void addNode(T data) {
         Node newNode = new Node(data);
-
         if (head == null) {
             head = newNode;
             tail = newNode;
         } else {
             tail.next = newNode;
         }
-
         tail = newNode;
         size++;
+    }
+
+    public void removeNode(int index) {
+        if (index == 0) {
+            head = head.next;
+        } else {
+            Node curNode = head;
+            for (int i = 0; i < index - 1; i++) {
+                curNode = curNode.next;
+            }
+            curNode.next = curNode.next.next;
+        }
     }
 
     public void display() {
