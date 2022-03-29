@@ -1,11 +1,19 @@
 package com.company.java3.lesson1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MoveItems {
     public static void main(String[] args) {
         Genericc[] arr = {new Genericc("first"), new Genericc(2)};
         printArray(arr);
         getMovedArray(arr, 0, 1);
         printArray(arr);
+        ArrayList<Genericc> arrList = getListFromArray(arr);
+    }
+
+    public static ArrayList<Genericc> getListFromArray(Genericc[] arr) {
+        return new ArrayList<>(Arrays.asList(arr));
     }
 
     public static Genericc[] getMovedArray(Genericc[] arr, int firstIndex, int secondIndex) {
