@@ -5,7 +5,9 @@ import com.company.entites.Product;
 import java.util.List;
 
 public class ProductRepository {
+
     List<Product> products;
+
     public Product getById(int id) {
         for (Product p: this.products) {
             if (p.getId() == id) {
@@ -22,6 +24,10 @@ public class ProductRepository {
 
     public List<Product> getAll () {
         return this.products;
+    }
+
+    public void add(Product product) {
+        this.products.add(product);
     }
 
 }

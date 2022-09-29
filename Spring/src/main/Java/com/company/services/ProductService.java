@@ -5,6 +5,8 @@ import com.company.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
     private ProductRepository productRepository;
@@ -20,4 +22,6 @@ public class ProductService {
     public Product getProductById(int id) {
         return productRepository.getById(id);
     }
+
+    public List<Product> getAllProducts() {return productRepository.getAll();}
 }
