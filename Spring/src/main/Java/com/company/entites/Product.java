@@ -1,9 +1,18 @@
 package com.company.entites;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "books")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     int id;
+    @Column(name = "title")
     String title;
-    double cost;
+    @Column(name = "price")
+    int price;
 
     public int getId() {
         return id;
@@ -21,12 +30,12 @@ public class Product {
         this.title = title;
     }
 
-    public double getCost() {
-        return cost;
+    public double getPrice() {
+        return price;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
 
