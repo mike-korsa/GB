@@ -5,6 +5,8 @@
       <option name="excludeList">
         <list>
           <option value="mysql:mysql-connector-java" />
+          <option value="com.fasterxml.jackson.core:jackson-databind" />
+          <option value="org.hibernate:hibernate-core" />
         </list>
       </option>
     </inspection_tool>
