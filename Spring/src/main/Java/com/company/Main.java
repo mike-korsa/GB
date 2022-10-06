@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.entites.Customer;
 import com.company.entites.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,12 +11,17 @@ public class Main {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Product.class)
-//                .addAnnotatedClass(Author.class)
+                .addAnnotatedClass(Customer.class)
 //                .addAnnotatedClass(Reader.class)
                 .buildSessionFactory();
         // CRUD
         Session session = null;
         session = factory.getCurrentSession();
+        session.beginTransaction();
+        Product p = session.get(Product.class, 1);
+        System.out.println(p);
+
+        session.getTransaction().commit();
 
     }
 }
