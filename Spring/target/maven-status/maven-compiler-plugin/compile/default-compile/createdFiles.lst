@@ -1,6 +1,7 @@
 com\company\controllers\HomeController.class
 com\company\services\ProductService.class
 com\company\Main.class
+com\company\entites\Customer.class
 com\company\entites\Product.class
 com\company\repositories\ProductRepository.class
 com\company\controllers\ProductController.class
