@@ -1,9 +1,12 @@
 package com.company.entites;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "books")
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +16,14 @@ public class Product {
     String title;
     @Column(name = "price")
     int price;
-
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @JoinTable(
+            name = "customers_products",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "customer_id")
+    )
+    private List<Customer> customers;
     public int getId() {
         return id;
     }
@@ -38,5 +48,9 @@ public class Product {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Product [" + id + " " + title +  "]";
+    }
 
 }
