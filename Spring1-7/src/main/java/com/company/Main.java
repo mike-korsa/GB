@@ -1,12 +1,12 @@
 package com.company;
 
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.webapp.WebAppContext;
+
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.net.URL;
 import java.security.ProtectionDomain;
-
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) throws Exception {
         /*Server server = new Server(8189);

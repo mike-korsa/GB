@@ -1,0 +1,6 @@
+com\company\services\ProductService.class
+com\company\Main.class
+com\company\repositories\ProductRepository.class
+com\company\controllers\ProductController.class
+com\company\entities\Customer.class
+com\company\entities\Product.class
