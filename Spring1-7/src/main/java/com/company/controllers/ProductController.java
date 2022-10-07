@@ -2,13 +2,9 @@ package com.company.controllers;
 
 import com.company.entities.Product;
 import com.company.services.ProductService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class ProductController {
@@ -23,4 +19,12 @@ public class ProductController {
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
     public Product getProductById(@PathVariable long id) {return productService.getById(id).get(); }
+
+    @RequestMapping(value = "/products/delete/{id}", method = RequestMethod.GET)
+    public void  deleteProductById(@PathVariable long id) {productService.deleteById(id); }
+
+    @RequestMapping(value = "/products/price_range", method = RequestMethod.GET)
+    public List<Product> findAllProductsByPriceBetween(@RequestParam Integer min,@RequestParam Integer max) {
+        return productService.getAllByPriceBetween(min, max);
+    }
 }
