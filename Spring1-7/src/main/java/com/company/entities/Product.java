@@ -26,7 +26,12 @@ public class Product {
     private List<Customer> customers;
 
     public Product() {
+    }
 
+    public Product(Long id, String title, int price) {
+        this.id = id;
+        this.title = title;
+        this.price = price;
     }
 
     public Long getId() {
@@ -45,7 +50,7 @@ public class Product {
         this.title = title;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
