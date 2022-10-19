@@ -1,5 +1,8 @@
+com\company\dto\ProductDto.class
 com\company\services\ProductService.class
 com\company\Main.class
+com\company\controllers\ProductControllerRest.class
+com\company\repositories\specifications\ProductSpecifications.class
 com\company\repositories\ProductRepository.class
 com\company\controllers\ProductController.class
 com\company\entities\Customer.class
