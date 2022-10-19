@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequestMapping("/api/v1/products")
 @RestController
@@ -35,14 +36,21 @@ public class ProductControllerRest {
     public Product getProductById(@PathVariable long id) {return productService.getById(id).get(); }
 
     @PostMapping
-    public Product saveNewProduct(@RequestBody ProductDto product) {
+    public ProductDto saveNewProduct(@RequestBody ProductDto product) {
         product.setId(null);
-        return productService.save(new Product(product.getId(), product.getTitle(), product.getPrice()));
+        Product p = productService.save(new Product(product.getTitle(), product.getPrice()));
+        product.setId(p.getId());
+        return product;
     }
 
     @PutMapping
-    public Product updateProduct(@RequestBody ProductDto product) {
-        return productService.save(new Product(product.getId(), product.getTitle(), product.getPrice()));
+    public ProductDto updateProduct(@RequestBody ProductDto product) {
+        //Optional<Product> p = productService.getById(product.getId()).get();
+        Product p = productService.getById(product.getId()).get();
+        p.setPrice(product.getPrice());
+        p.setTitle(product.getTitle());
+        productService.save(p);
+        return product;
     }
 
     @DeleteMapping("/{id}")
