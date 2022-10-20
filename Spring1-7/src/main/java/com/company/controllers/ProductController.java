@@ -2,11 +2,13 @@ package com.company.controllers;
 
 import com.company.entities.Product;
 import com.company.services.ProductService;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class ProductController {
     private ProductService productService;
 
@@ -26,5 +28,16 @@ public class ProductController {
     @RequestMapping(value = "/products/price_range", method = RequestMethod.GET)
     public List<Product> findAllProductsByPriceBetween(@RequestParam Integer min,@RequestParam Integer max) {
         return productService.getAllByPriceBetween(min, max);
+    }
+
+    @RequestMapping("/products/list")
+    public String showStudentsList(Model model) {
+        List<Product> allProducts = productService.getAll();
+        model.addAttribute("productsList", allProducts);
+        return "products-list";
+    }
+    @RequestMapping("/")
+    public String showHomePage() {
+        return "index";
     }
 }
