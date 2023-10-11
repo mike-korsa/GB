@@ -1,0 +1,15 @@
+-- Table: public.orders
+
+-- DROP TABLE IF EXISTS public.orders;
+
+CREATE TABLE IF NOT EXISTS public.orders
+(
+    "ID" bigint NOT NULL DEFAULT nextval('"orders_ID_seq"'::regclass),
+    "Order_ID" bigint,
+    CONSTRAINT orders_pkey PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.orders
+    OWNER to postgres;
